@@ -12,25 +12,30 @@ int main()
 double num;
 double small = 0 ;
 double large = 0;
+string unit;
 cin >> num ;
-cout << num << "\n";
+cin >> unit;
+
+
 while (num)
 {
+if ((unit == "cm") ||(unit == "in")||(unit == "ft") ||(unit == "m")){
+
+
     if (num <= small)
     {
    cout << "the smallest so far\n";
    small = num;
     }else if(num >= large){
 cout << "the largest so far\n";
-large = num;
-    }
+large = num;}
     
-   
+}
     
     num -= num;
-    
     cin >> num;
-    
+        cin >> unit;
+
     }
 
 
