@@ -1,5 +1,10 @@
 #include <iostream>
+#include<string>
+#include<vector>
+#include<algorithm>
+#include<cmath>
 using namespace std;
+inline void keep_window_open() { char ch; cin>>ch; }
 
 int main()
 {
@@ -19,10 +24,16 @@ cin >> friend_sex;
 if (friend_sex == 'm')  
 cout << "If you see " << friend_name << " please ask him to call me\n";
 if (friend_sex == 'f')  
-cout << "If you see " << friend_name << " please ask her to call me\nEnter Age ";
+cout << "If you see " << friend_name << " please ask her to call me";
+cout << "\nEnter Age ";
+           
 cin >> age;
 cout << "I hear you just had a birthday and you are " << age << " years old\n";
-cout << "\nYours Sincerely\nAhmed";
+cout << "\n\nYours Sincerely\nAhmed";
 
+
+
+keep_window_open();
+return 0;
 
 }
