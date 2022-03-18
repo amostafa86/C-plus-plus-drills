@@ -10,21 +10,27 @@ inline void keep_window_open() { char ch; cin>>ch; }
 int main()
 {
 double num;
-double num1;
+double small = 0 ;
+double large = 0;
 cin >> num ;
-cin >> num1;
-while (num && num1)
+cout << num << "\n";
+while (num)
 {
-    if (num > num1 && num != num1) cout << "the larger value is " << num << "\nthe smaller value is " << num1 <<"\n";
-    else if (num < num1 && num != num1) cout << "the larger value is " << num1 << "\nthe smaller value is " << num <<"\n";
-   else cout << "The numbers are equal.\n";
-   if ( (fabs(num - num1) <= (1.0/100)) || (fabs(num1 - num) <= (1.0/100)) )
-   cout << "the numbers are almost equal\n";
+    if (num <= small)
+    {
+   cout << "the smallest so far\n";
+   small = num;
+    }else if(num >= large){
+cout << "the largest so far\n";
+large = num;
+    }
+    
+   
     
     num -= num;
-    num1 -= num1;
+    
     cin >> num;
-    cin >> num1;
+    
     }
 
 
